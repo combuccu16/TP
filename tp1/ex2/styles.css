@@ -1,0 +1,34 @@
+*{
+    margin : 0px ;
+    padding : 0px ;
+    box-sizing: border-box;
+}
+body{
+    height : 100vh ;
+    display: flex;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.container{
+    height : 300px ;
+    width : 80%;
+    color : #F8F8F8;
+    box-shadow: 5px 5px 10px black;
+    display: flex;
+    flex-direction: column;
+}
+.paragraph-container , .input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-container{
+    gap : 50px ;
+}
+.paragraph-container{
+    height : 100px ;
+}
+input , select{
+    width : 200px ;
+    height : 35px ;
+}

@@ -1,0 +1,150 @@
+:root{
+    --black-- : #959595;
+    --grey-- : #414a4c;
+    --red-- : 	#ff0000;
+    --green-- :   linear-gradient(45deg, #A8E063, #56AB2F);
+
+}
+*{
+    padding:  0px ;
+    margin : 0px ;
+    box-sizing: border-box;
+}
+
+body{
+    height : 100vh;
+}
+
+
+header{
+    height : 50px ;
+    display : flex ;
+    align-items: center;
+    justify-content: center;
+}
+.difficulty{
+    height : 400px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width : 600px ;
+}
+button{
+    width : 100px ;
+    padding:  10px ;
+    height : 35px ;
+    position : relative;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+}
+button::after{
+    content: '';
+    background-image:linear-gradient(to left , lightblue , rgb(0, 189, 186));
+    position:  absolute;
+    top : 0;
+    left : 0;
+    inset: -2px;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 1s ease;
+}
+select , input , option{
+    width : 200px ;
+    height : 30px ;
+    background-color: var(--black--);
+    transition: .3s ease;
+    cursor: pointer;
+    border-radius: 5px ;
+    text-align: center;
+    color : white
+}
+select:hover , input:hover{
+    background-color: #b4b3b3;
+}
+input::placeholder{
+    text-align: center;
+    font-size : 15px ;
+    color : white ;
+}
+.appear{
+    width : 200px ;
+    height : 100% ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.result{
+    width : 100px ;
+    height : 35px ;
+    background-color: blue;
+    border-radius: 5px ;
+    justify-content: center;
+    display : flex ;
+    align-items: center;
+    color : white ;
+}
+.game-container{
+    height : calc(100%-250px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.play-again{
+    width : 100% ;
+    height : 400px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#intro{
+    background-image : linear-gradient(to left , lightblue , rgb(0, 189, 186));
+    background-clip: text;
+    color : transparent;
+    font-size : 40px ;
+}
+.hidden{
+    display : flex ;
+    align-items: center;
+    justify-content : center;
+
+}
+.output{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.disappear{
+    display: none;
+}
+#f3{
+    display: flex;
+    justify-content: space-around;
+    width : 600px;
+}
+#output{
+
+}
+#output h1 {
+    background-image: var(--green--);
+    background-clip : text ;
+    color : transparent;
+}
+.wrong{
+    animation-name : an ;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+}
+
+@keyframes an {
+    25% {transform : translateX(-5px);}
+    50% {transform : translateX(5px);}
+    75% {transform : translateX(-5px);}
+    100% {transform : translateX(0px);}
+}
